@@ -1,37 +1,36 @@
-import SearchWord from './SearchWord';
-import Definition from './Definition';
-import Source from './Source';
-import NotFound from './NotFound';
+import SearchWord from "./SearchWord";
+import Definition from "./Definition";
+import Source from "./Source";
 
 type ResultsProps = {
-	definition: {
-		license: object;
-		meanings: object[];
-		phonetics: object[];
-		sourceUrls: string[];
-		word: string;
-	} | null;
+  definition: {
+    license: object;
+    meanings: {
+      antonyms: string[];
+      definitions: {
+        definition: string;
+      }[];
+      partOfSpeech: string;
+      synonyms: string[];
+    }[];
+    phonetics: {
+      text: string;
+      audio: string;
+    }[];
+    sourceUrls: string[];
+    word: string;
+  };
+  onWordUpdate: (word: string) => void;
 };
 
-const Results = ({ definition }: ResultsProps) => {
-	return (
-		<>
-			<SearchWord />
-			<Definition />
-			<Source />
-			<NotFound />
-			{/* Delete this -- just for testing */}
-			<p className='mt-16'>Word: {definition?.word}</p>
-			<strong>Defitions</strong>
-			{definition?.meanings.map((meaning) => {
-				return (
-					<>
-						<p>{meaning.partOfSpeech}</p>
-					</>
-				);
-			})}
-		</>
-	);
+const Results = ({ definition, onWordUpdate }: ResultsProps) => {
+  return (
+    <>
+      <SearchWord word={definition?.word} phonetics={definition.phonetics} />
+      <Definition meanings={definition.meanings} onWordUpdate={onWordUpdate} />
+      <Source sources={definition.sourceUrls} />
+    </>
+  );
 };
 
 export default Results;
