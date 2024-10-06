@@ -54,7 +54,7 @@ const Definition = ({ meanings, onWordUpdate }: DefinitionProps) => {
               <li key={index} className="flex">
                 <span className="mr-5 w-[0.313rem] text-purple">•</span>
                 <div className="flex-1">
-                  <p className="text-base leading-6 tablet:text-lg dark:text-white">
+                  <p className="text-base leading-6 text-grey-700 tablet:text-lg dark:text-white">
                     {def.definition}
                   </p>
                   {def.example && (
