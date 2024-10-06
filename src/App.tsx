@@ -5,6 +5,11 @@ import Results from "./components/Results";
 import NotFound from "./components/NotFound";
 import "./App.css";
 
+// spacing and sizing
+// colors light and dark mode
+// fine tuning
+// do the font change thing
+
 function App() {
   const [searchWord, setSearchWord] = useState<string | null>(null);
   const [searchBarText, setSearchBarText] = useState("");
@@ -48,24 +53,25 @@ function App() {
         setIsWordNotFound(true);
       }
     };
-
     fetchDefinition();
   }, [searchWord]);
 
   return (
-    <>
+    <div className="mx-auto max-w-[46rem]">
       <Header />
-      <Search
-        onSearch={handleSearch}
-        searchBarText={searchBarText}
-        onInputChange={handleInputChange}
-        isEmptySearch={isEmptySearch}
-      />
-      {definition && !isWordNotFound && !isEmptySearch && (
-        <Results definition={definition} onWordUpdate={updateSearchWord} />
-      )}
-      {isWordNotFound && !isEmptySearch && <NotFound />}
-    </>
+      <main className="mt-6 tablet:mt-[3.25rem]">
+        <Search
+          onSearch={handleSearch}
+          searchBarText={searchBarText}
+          onInputChange={handleInputChange}
+          isEmptySearch={isEmptySearch}
+        />
+        {definition && !isWordNotFound && !isEmptySearch && (
+          <Results definition={definition} onWordUpdate={updateSearchWord} />
+        )}
+        {isWordNotFound && !isEmptySearch && <NotFound />}
+      </main>
+    </div>
   );
 }
 

@@ -20,9 +20,9 @@ const Search = ({
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="flex items-center border border-grey-900">
+      <div className="flex h-12 items-center rounded-2xl bg-grey-300 px-6 tablet:h-16">
         <input
-          className="w-full"
+          className="w-full bg-grey-300 font-bold focus:outline-none"
           type="text"
           placeholder="Search for any word..."
           value={searchBarText}
