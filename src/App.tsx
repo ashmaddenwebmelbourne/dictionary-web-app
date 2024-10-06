@@ -6,8 +6,8 @@ import NotFound from "./components/NotFound";
 import "./App.css";
 
 function App() {
-  const [searchWord, setSearchWord] = useState<string | null>(null);
-  const [searchBarText, setSearchBarText] = useState("");
+  const [searchWord, setSearchWord] = useState<string | null>("Keyboard");
+  const [searchBarText, setSearchBarText] = useState("Keyboard");
   const [definition, setDefinition] = useState(null);
   const [isWordNotFound, setIsWordNotFound] = useState(false);
   const [isEmptySearch, setIsEmptySearch] = useState(false);
