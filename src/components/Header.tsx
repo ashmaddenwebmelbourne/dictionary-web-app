@@ -17,7 +17,7 @@ const Header = () => {
       />
       <div className="flex h-8 items-center gap-4 tablet:gap-[1.625rem]">
         <div className="flex h-8 items-center gap-4 border-r border-grey-400 pr-4 tablet:gap-[1.125rem] tablet:pr-[1.625rem]">
-          <p className="text-sm font-bold leading-6 tablet:text-lg">
+          <p className="text-sm font-bold leading-6 tablet:text-lg dark:text-white">
             Sans Serif
           </p>
           <img src={downArrow} alt="Select a different font type" />

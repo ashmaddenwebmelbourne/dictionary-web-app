@@ -5,7 +5,7 @@ type SourceProps = {
 };
 
 const Source = ({ sources }: SourceProps) => (
-  <div className="flex flex-wrap items-center gap-5 border-t border-grey-400 pt-6">
+  <div className="flex flex-wrap items-center gap-5 border-t border-grey-400 pt-6 dark:border-grey-600">
     <p className="text-sm text-grey-500 underline">
       Source{sources.length > 1 ? "s" : ""}:
     </p>
@@ -13,7 +13,7 @@ const Source = ({ sources }: SourceProps) => (
       {sources.map((source, index) => (
         <li className="flex items-center gap-2" key={index}>
           <a
-            className="text-sm text-grey-700 underline"
+            className="text-sm text-grey-700 underline dark:text-white"
             href={source}
             target="_blank"
             rel="noopener noreferrer"

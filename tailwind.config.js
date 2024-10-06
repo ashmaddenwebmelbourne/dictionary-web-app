@@ -14,7 +14,7 @@ export default {
       "grey-300": "#F4F4F4",
       white: "#FFFFFF",
       purple: "#A445ED",
-      red: "FF5252",
+      red: "#FF5252",
     },
     fontFamily: {
       inter: ["Inter", "sans-serif"],

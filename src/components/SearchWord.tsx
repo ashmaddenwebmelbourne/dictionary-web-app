@@ -25,14 +25,16 @@ const SearchWord = ({ word, phonetics }: SearchWordProps) => {
 
   return (
     word && (
-      <div className="tablet:mt-[2.688rem] desktop:mt-[2.813rem] mt-7 flex items-center justify-between">
+      <div className="mt-7 flex items-center justify-between tablet:mt-[2.688rem] desktop:mt-[2.813rem]">
         <div className="flex flex-col">
-          <h1 className="tablet:text-[4rem] text-[2rem] font-bold">{word}</h1>
-          <p className="tablet:text-2xl text-lg text-purple">{phoneticText}</p>
+          <h1 className="text-[2rem] font-bold tablet:text-[4rem] dark:text-white">
+            {word}
+          </h1>
+          <p className="text-lg text-purple tablet:text-2xl">{phoneticText}</p>
         </div>
         {audioSrc && (
           <div
-            className="bg-[#E8D1FB flex h-12 w-12 cursor-pointer items-center justify-center rounded-full"
+            className="bg-[#E8D1FB flex h-12 w-12 cursor-pointer items-center justify-center rounded-full tablet:h-[4.688rem] tablet:w-[4.688rem]"
             onClick={playAudio}
           >
             <img src={playButton} alt="Play pronunciation" />

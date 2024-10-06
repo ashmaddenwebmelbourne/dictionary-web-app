@@ -5,11 +5,6 @@ import Results from "./components/Results";
 import NotFound from "./components/NotFound";
 import "./App.css";
 
-// spacing and sizing
-// colors light and dark mode
-// fine tuning
-// do the font change thing
-
 function App() {
   const [searchWord, setSearchWord] = useState<string | null>(null);
   const [searchBarText, setSearchBarText] = useState("");

@@ -2,7 +2,7 @@ const NotFound = () => {
   return (
     <div className="mt-[4rem] flex flex-col items-center gap-6 tablet:mt-[8rem]">
       <p className="text-center text-[4rem]">😕</p>
-      <h1 className="text-center text-base font-bold tablet:text-[1.25rem]">
+      <h1 className="text-center text-base font-bold tablet:text-[1.25rem] dark:text-white">
         No Definitions Found
       </h1>
       <p className="text-center text-base leading-6 text-grey-500 tablet:text-lg">

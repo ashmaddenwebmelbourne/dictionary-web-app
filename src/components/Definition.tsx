@@ -41,10 +41,10 @@ const Definition = ({ meanings, onWordUpdate }: DefinitionProps) => {
       {meanings.map((meaning, index) => (
         <div key={index}>
           <div className="flex items-center gap-8">
-            <strong className="text-lg font-bold italic tablet:text-2xl">
+            <strong className="text-lg font-bold italic tablet:text-2xl dark:text-white">
               {meaning.partOfSpeech}
             </strong>
-            <div className="h-[0.063rem] w-full bg-grey-400"></div>
+            <div className="h-[0.063rem] w-full bg-grey-400 dark:bg-grey-600"></div>
           </div>
           <p className="mb-4 mt-8 text-base text-grey-500 tablet:mb-6 tablet:mt-10 tablet:text-xl">
             Meaning
@@ -54,7 +54,7 @@ const Definition = ({ meanings, onWordUpdate }: DefinitionProps) => {
               <li key={index} className="flex">
                 <span className="mr-5 w-[0.313rem] text-purple">•</span>
                 <div className="flex-1">
-                  <p className="text-base leading-6 tablet:text-lg">
+                  <p className="text-base leading-6 tablet:text-lg dark:text-white">
                     {def.definition}
                   </p>
                   {def.example && (
